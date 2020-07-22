@@ -5,7 +5,13 @@ Returns: a List of integers
 def moving_zeroes(arr):
     # Your code here
 
-    pass
+    new_array = [0]*len(arr)
+    index = 0
+    for i in arr:
+        if i != 0:
+            new_array[index] = i
+            index += 1
+    return new_array
 
 
 if __name__ == '__main__':
