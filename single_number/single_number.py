@@ -4,9 +4,22 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-    for i in arr:
-        if arr.count(i) == 1:
-            return i
+    s = set()
+    for x in arr:
+        if x in s:
+            s.remove(x)
+        else:
+            s.add(x)
+    return list(s)[0]
+
+
+
+
+
+    # solution 1
+    # for i in arr:
+    #     if arr.count(i) == 1:
+    #         return i
 
 
 if __name__ == '__main__':
